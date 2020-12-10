@@ -20,7 +20,7 @@ Lapland is a simple and straightforward party plugin that allows players to shar
 | Setting                | Default | Description                                                                                            |
 |------------------------|---------|--------------------------------------------------------------------------------------------------------|
 | maxRadius    | 10      | The maximum distance at which experience can be shared, in chunks. Use 0 for an infinite range.                  |
-| crossWorldSharing      | false   | Experienced is shared freely among all worlds ignoring maxRadius.                                      |
+| crossWorldSharing      | false   | Experience is shared freely among all worlds ignoring maxRadius.                                      |
 | maxPlayers             | 10      | The maximum amount of players allowed in a party.                                                      |
 | experienceDividend     | 50      | The percentage of experience shared between the other party members. The remainder goes to the player. The lower <code>experienceDividend</code> is, the more experience the player receives. |
 
