@@ -1,0 +1,21 @@
+main: co.redeker.lapland.Lapland
+name: lapland
+version: 1.0.0
+author: Jonathan Redeker
+api-version: 1.16
+commands:
+   party:
+      description: Lapland's party system.
+      usage: /<command> [create|invite|leave|disband]
+      permission: lapland.party
+      aliases: [pt]
+   
+permissions:
+   lapland.*:
+      description: Allows the usage of all Lapland commands.
+      default: op
+      children:
+         lapland.party: true
+   lapland.party:
+      description: Allows the usage Lapland's party system.
+      default: true

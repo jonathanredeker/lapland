@@ -1,0 +1,9 @@
+.settings/
+.vscode/
+src/main/java/co/redeker/lapland/db/
+target/
+.DS_Store
+.classpath
+.project
+.prettierrc
+
