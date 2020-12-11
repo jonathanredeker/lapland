@@ -35,7 +35,7 @@ public class Kick {
                         if (playerToKick != null) {
                             String playerToKickPartyName = lapland.getPlayerConfig()
                                     .getString(playerToKick.getUniqueId().toString() + ".party");
-                            if (playerToKickPartyName.equalsIgnoreCase(partyName)) {
+                            if (playerToKickPartyName != null && playerToKickPartyName.equalsIgnoreCase(partyName)) {
                                 members = lapland.getPartyConfig().getStringList(partyName + ".members");
                                 members.remove(playerToKick.getUniqueId().toString());
                                 lapland.getPartyConfig().set(partyName + ".members", members);
