@@ -14,12 +14,22 @@ Lapland is a simple and straightforward party plugin that allows players to shar
 <br>
 
 ## ⌨️&nbsp;&nbsp;&nbsp;Commands
-| Command                | Description                                                                                                                     |
-|------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| /party create <code>name</code>   | Create a new party with a name.                                                                                      |
-| /party invite <code>player</code> | Send a party invitation to a player.                                                                                 |
-| /party leave           | Leave the party. A new leader will be chosen based on seniority. If you are the only party member, the party will be disbanded. |
-| /party disband         | Disband the party.                                                                                                              |
+| Command                           | Description                                                                                                                     |
+|-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| /party create <code>name</code>   | Create a new party with a name.                                                                                                 |
+| /party invite <code>player</code> | Send a party invitation to a player.                                                                                            |
+| /party leave                      | Leave the party. A new leader will be chosen based on seniority. If you are the only party member, the party will be disbanded. |
+| /party disband                    | Disband the party.                                                                                                              |
+| /party kick <code>name</code>     | Is someone not playing fair? Kick them out. :-)                                                                                 |
+
+<br>
+
+### Aliases
+| Command  | Alias(s) |
+|----------|----------|
+| /party   | /pt      |
+| /lapland | /lp      |
+
 <br> 
 
 ## 🔐&nbsp;&nbsp;&nbsp;Permissions
