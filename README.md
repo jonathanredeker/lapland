@@ -1,6 +1,8 @@
 # Lapland
 
-Lapland is a simple and straightforward party plugin that allows players to share their experience gains. 
+<b>Only compatible with version 1.16.</b>
+
+Lapland is a simple and straightforward party plugin that allows players to share their experience gains.
 
 <br>
 
