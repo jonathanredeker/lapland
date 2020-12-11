@@ -10,7 +10,6 @@ Lapland is a simple and straightforward party plugin that allows players to shar
 - [ ] Add a <code>leader</code> subcommand so the leader may pass on leadership to another party member.
 - [ ] Add a <code>notify</code> subcommand so players can toggle experience gain messages.
 - [ ] Add a <code>lapland</code> command that allows an administrator  to adjust the configuration within the game or server console.
-- [ ] Share achievements with the rest of the party?
 
 <br>
 
