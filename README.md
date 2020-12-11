@@ -51,4 +51,4 @@ Lapland is a simple and straightforward party plugin that allows players to shar
 ## 🎲&nbsp;&nbsp;&nbsp;Experience Sharing
 By default, experience in only shared within a 10 chunk radius within the same world. However, server administrators can change the default radius. Cross world sharing may also be enabled. i.e. Player One can gain experience in the Nether and Player Two will receive a portion of it in the Overworld.
 
-When experience is gained, 50% is given to the player and the remaining 50% is split evenly amongst the rest of the party. Only party members who are online and alive will be given experience. The experience dividend may also be changed.
+When experience is gained, 50% is kept by the player and the remaining 50% is split evenly amongst the rest of the party. Only party members who are online and alive will be given experience. The experience dividend may also be changed.
