@@ -14,7 +14,7 @@ import net.md_5.bungee.api.ChatColor;
 public class Leave {
 
     public static void execute(final Lapland lapland, final CommandSender sender, final String[] args) {
-        Player player = (Player)sender;
+        Player player = (Player) sender;
         UUID playerUUID = player.getUniqueId();
         String partyName = lapland.getPlayerConfig().getString(playerUUID.toString() + ".party");
         String partyLeader = lapland.getPartyConfig().getString(partyName + ".leader");
@@ -27,7 +27,7 @@ public class Leave {
             lapland.getPartyConfig().set(partyName + ".members", members);
             lapland.getPlayerConfig().set(playerUUID + ".party", null);
             sender.sendMessage("You have left the party.");
-    
+
             // If there are not members remaining, disband the party.
             if (!members.isEmpty()) {
                 // Notify all online members about the player's departure from the party.
@@ -38,7 +38,7 @@ public class Leave {
                     }
                 }
                 // If the player was leader, then set new party leader to a different member.
-                if (partyLeader.equals(playerUUID.toString())) {
+                if (partyLeader.equalsIgnoreCase(playerUUID.toString())) {
                     // Get first member in party. (default pick)
                     String newLeaderUUID = members.get(0);
                     Player newLeader = null;
@@ -74,5 +74,5 @@ public class Leave {
         lapland.savePartyConfig();
         lapland.savePlayerConfig();
     }
-    
+
 }

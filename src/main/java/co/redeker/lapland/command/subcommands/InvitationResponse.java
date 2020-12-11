@@ -28,7 +28,7 @@ public class InvitationResponse {
                     if (lapland.getPlayerConfig().getString(player.getUniqueId().toString() + ".party") == null) {
                         invitations.remove(playerUUID.toString());
                         lapland.getPartyConfig().set(partyName + ".invitations", invitations);
-                        if (decision.equals("accept")) {
+                        if (decision.equalsIgnoreCase("accept")) {
                             lapland.getPlayerConfig().set(playerUUID.toString() + ".party", partyName);
                             members = lapland.getPartyConfig().getStringList(partyName + ".members");
                             for (String memberUUID : members) {

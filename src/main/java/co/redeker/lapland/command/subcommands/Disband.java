@@ -25,10 +25,10 @@ public class Disband {
         List<String> members = new ArrayList<String>();
 
         if (partyName != null) {
-            if (partyLeader.equals(playerUUID.toString())) {
+            if (partyLeader.equalsIgnoreCase(playerUUID.toString())) {
                 if (args.length >= 2) {
                     String decision = args[1];
-                    if (decision.equals("yes")) {
+                    if (decision.equalsIgnoreCase("yes")) {
                         members = lapland.getPartyConfig().getStringList(partyName + ".members");
                         lapland.getPartyConfig().set(partyName, null);
                         for (String memberUUID : members) {

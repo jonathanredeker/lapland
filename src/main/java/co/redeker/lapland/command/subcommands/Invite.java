@@ -25,12 +25,12 @@ public class Invite {
         List<String> invitations = new ArrayList<String>();
 
         if (partyName != null) {
-            if (partyLeader.equals(playerUUID.toString())) {
+            if (partyLeader.equalsIgnoreCase(playerUUID.toString())) {
                 if (args.length >= 2) {
                     String inviteeName = args[1];
                     Player invitee = Bukkit.getPlayer(inviteeName);
                     if (invitee != null) {
-                        if (!invitee.getUniqueId().toString().equals(playerUUID.toString())) {
+                        if (!invitee.getUniqueId().toString().equalsIgnoreCase(playerUUID.toString())) {
                             List<String> members = lapland.getPartyConfig().getStringList(partyName + ".members");
                             int partyMaxSize = lapland.getConfig().getInt("maxPlayers");
                             if (members.size() < partyMaxSize) {
