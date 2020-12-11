@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import co.redeker.lapland.Lapland;
 
 public class PlayerJoinListener implements Listener {
-    
+
     private Lapland lapland;
 
     public PlayerJoinListener(final Lapland lapland) {
@@ -19,13 +19,13 @@ public class PlayerJoinListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         UUID uuid = event.getPlayer().getUniqueId();
-        
-        if (lapland.getPlayerConfig().get(uuid.toString()) == null) {    
+
+        if (lapland.getPlayerConfig().get(uuid.toString()) == null) {
             lapland.getPlayerConfig().set(uuid.toString() + ".party", null);
-            lapland.getPlayerConfig().set(uuid.toString() + ".notifyExperienceGain", true);
+            lapland.getPlayerConfig().set(uuid.toString() + ".notifyExperienceGain", false);
             lapland.savePlayerConfig();
         }
-        
+
     }
 
 }

@@ -24,8 +24,8 @@ public class Disband {
         String partyLeader = lapland.getPartyConfig().getString(partyName + ".leader");
         List<String> members = new ArrayList<String>();
 
-        if (partyLeader.equals(playerUUID.toString())) {
-            if (partyName != null) {
+        if (partyName != null) {
+            if (partyLeader.equals(playerUUID.toString())) {
                 if (args.length >= 2) {
                     String decision = args[1];
                     if (decision.equals("yes")) {
@@ -46,7 +46,7 @@ public class Disband {
                 } else if (args.length >= 1) {
                     if (lapland.getPartyConfig().getString(partyName) != null) {
                         // send clickable text to sender
-                        sender.sendMessage(ChatColor.GOLD + "Are you sure you want to disband the party?");
+                        sender.sendMessage("Are you sure you want to disband the party?");
                         player.spigot()
                                 .sendMessage(new ComponentBuilder("\nClick: ").append("[CONFIRM] ")
                                         .color(ChatColor.GREEN)
@@ -63,10 +63,10 @@ public class Disband {
                     }
                 }
             } else {
-                sender.sendMessage("You are not in a party.");
+                sender.sendMessage("You are not the party's leader.");
             }
         } else {
-            sender.sendMessage("You are not the party's leader.");
+            sender.sendMessage("You are not in a party.");
         }
 
         lapland.savePartyConfig();

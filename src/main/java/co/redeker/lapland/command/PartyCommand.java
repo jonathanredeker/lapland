@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
@@ -15,6 +16,7 @@ import co.redeker.lapland.command.subcommands.Create;
 import co.redeker.lapland.command.subcommands.Disband;
 import co.redeker.lapland.command.subcommands.InvitationResponse;
 import co.redeker.lapland.command.subcommands.Invite;
+import co.redeker.lapland.command.subcommands.Kick;
 import co.redeker.lapland.command.subcommands.Leave;
 
 final public class PartyCommand implements TabExecutor {
@@ -47,6 +49,7 @@ final public class PartyCommand implements TabExecutor {
                             InvitationResponse.execute(lapland, sender, args);
                             break;
                         case "kick":
+                            Kick.execute(lapland, sender, args);
                             break;
                         case "leave":
                             Leave.execute(lapland, sender, args);
@@ -74,7 +77,7 @@ final public class PartyCommand implements TabExecutor {
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         if (args.length == 1) {
-            String[] argumentList = { "create", "invite", "leave", "disband", };
+            String[] argumentList = { "create", "invite", "leave", "disband", "kick" };
             return Arrays.asList(argumentList);
         } else if (args.length == 2) {
             List<String> argumentList = new ArrayList<String>();
@@ -83,6 +86,7 @@ final public class PartyCommand implements TabExecutor {
                 case "create":
                     argumentList.add("<name>");
                     break;
+                case "kick": // To-do: Only suggest players that are in your party.
                 case "invite":
                     for (Player player : players) {
                         if (player.getName() != sender.getName()) {
