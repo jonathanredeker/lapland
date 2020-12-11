@@ -22,8 +22,6 @@ Lapland is a simple and straightforward party plugin that allows players to shar
 | /party disband                    | Disband the party.                                                                                                              |
 | /party kick <code>name</code>     | Is someone not playing fair? Kick them out. :-)                                                                                 |
 
-<br>
-
 ### Aliases
 | Command  | Alias(s) |
 |----------|----------|
