@@ -18,11 +18,13 @@ public class PlayerJoinListener implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
+        String name = event.getPlayer().getName();
         UUID uuid = event.getPlayer().getUniqueId();
 
         if (lapland.getPlayerConfig().get(uuid.toString()) == null) {
             lapland.getPlayerConfig().set(uuid.toString() + ".party", null);
             lapland.getPlayerConfig().set(uuid.toString() + ".notifyExperienceGain", false);
+            lapland.getPlayerConfig().set(uuid.toString() + ".name", name);
             lapland.savePlayerConfig();
         }
 

@@ -18,9 +18,9 @@ public class Kick {
         Player player = (Player) sender;
         UUID playerUUID = player.getUniqueId();
         String partyName = lapland.getPlayerConfig().getString(playerUUID.toString() + ".party");
-        String partyLeader = lapland.getPartyConfig().getString(partyName + ".leader");
         List<String> members = new ArrayList<String>();
         if (partyName != null) {
+            String partyLeader = lapland.getPartyConfig().getString(partyName + ".leader");
             if (partyLeader.equalsIgnoreCase(playerUUID.toString())) {
                 if (args.length >= 2) {
                     String nameToKick = args[1];

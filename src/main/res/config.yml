@@ -1,17 +1,7 @@
 #  Lapland
 #  Version 1.0.0
 #  http://github.com/jonathanredeker
-maxRadius: 10
-
-# EXP is shared freely across worlds.
-# If true, then maxRadius is ignored.
-crossWorldSharing: false
-
-# The maximum amount of players allowed in a party, including the leader.
+maxDistance: 10
+dimensionalSharing: false
 maxPlayers: 10
-
-# The percentage of EXP split amongst the other party members.
-# i.e. If expDividend is 40%, the player who picks up the EXP orb will
-# receive 60%. The remaining 40% will be evenly distrbuted to the 
-# players in range of the player.
-experienceDividend: 50
+experienceKept: 50

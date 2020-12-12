@@ -13,10 +13,12 @@ import org.bukkit.entity.Player;
 import co.redeker.lapland.Lapland;
 import co.redeker.lapland.command.subcommands.Create;
 import co.redeker.lapland.command.subcommands.Disband;
+import co.redeker.lapland.command.subcommands.Information;
 import co.redeker.lapland.command.subcommands.InvitationResponse;
 import co.redeker.lapland.command.subcommands.Invite;
 import co.redeker.lapland.command.subcommands.Kick;
 import co.redeker.lapland.command.subcommands.Leave;
+import co.redeker.lapland.command.subcommands.Notify;
 
 final public class PartyCommand implements TabExecutor {
 
@@ -37,6 +39,7 @@ final public class PartyCommand implements TabExecutor {
                         case "help":
                             break;
                         case "info":
+                            Information.execute(lapland, sender, args);
                             break;
                         case "create":
                             Create.execute(lapland, sender, args);
@@ -58,11 +61,14 @@ final public class PartyCommand implements TabExecutor {
                             break;
                         case "leader":
                             break;
+                        case "notify":
+                            Notify.execute(lapland, sender, args);
+                            break;
                         default:
-                            // Execute info
+                            Information.execute(lapland, sender, args);
                     }
                 } else {
-                    // Execute help
+                    Information.execute(lapland, sender, args);
                 }
             } else {
                 sender.sendMessage("Insufficient priveleges.");
@@ -76,7 +82,7 @@ final public class PartyCommand implements TabExecutor {
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         if (args.length == 1) {
-            String[] argumentList = { "create", "invite", "leave", "disband", "kick" };
+            String[] argumentList = { "create", "invite", "leave", "disband", "kick", "notify", "info" };
             return Arrays.asList(argumentList);
         } else if (args.length == 2) {
             List<String> argumentList = new ArrayList<String>();
@@ -84,6 +90,9 @@ final public class PartyCommand implements TabExecutor {
             switch (args[0]) {
                 case "create":
                     argumentList.add("<name>");
+                    break;
+                case "info":
+                    argumentList.add("<page>");
                     break;
                 case "kick": // To-do: Only suggest players that are in your party.
                 case "invite":

@@ -26,6 +26,7 @@ public class Create {
                     if (lapland.getPartyConfig().getString(partyName) == null) {
                         lapland.getPartyConfig().set(partyName + ".leader", playerUUID.toString());
                         lapland.getPartyConfig().set(partyName + ".members", members);
+                        lapland.getPartyConfig().set(partyName + ".experienceCollected", 0);
                         lapland.getPlayerConfig().set(playerUUID.toString() + ".party", partyName);
                         sender.sendMessage(
                                 "You have created the party " + ChatColor.AQUA + partyName + ChatColor.RESET + ".");

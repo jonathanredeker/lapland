@@ -17,11 +17,11 @@ public class Leave {
         Player player = (Player) sender;
         UUID playerUUID = player.getUniqueId();
         String partyName = lapland.getPlayerConfig().getString(playerUUID.toString() + ".party");
-        String partyLeader = lapland.getPartyConfig().getString(partyName + ".leader");
         List<String> members = new ArrayList<String>();
 
         // Check if the player is in a party
         if (partyName != null) {
+            String partyLeader = lapland.getPartyConfig().getString(partyName + ".leader");
             members = lapland.getPartyConfig().getStringList(partyName + ".members");
             members.remove(playerUUID.toString());
             lapland.getPartyConfig().set(partyName + ".members", members);
