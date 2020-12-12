@@ -6,6 +6,11 @@ Lapland is a simple and straightforward party plugin that allows players to shar
 
 <br>
 
+<img src="https://i.postimg.cc/ZnCmMsRB/party-info.png" alt="/pt info" width="400"/>
+<img src="https://i.postimg.cc/QN1ZH77r/invitation.png" alt="Player receiving a party invitation." width="400"/>
+
+<br>
+
 ## 📝&nbsp;&nbsp;&nbsp;To-do
 - [x] Add an <code>info</code> subcommand to provide the player information pertaining to their current party. i.e. List of players, online/offline status, who the leader is.
 - [ ] Add a <code>help</code> subcommand to provide the player with detailed usage information.
